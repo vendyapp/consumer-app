@@ -1,0 +1,11 @@
+framework module VendingSDK {
+  umbrella header "VendingSDK.h"
+  private header "BLE.h"
+  
+  export *
+  module * { export * }
+}
+
+module VendingSDK.Swift {
+    header "VendingSDK-Swift.h"
+}

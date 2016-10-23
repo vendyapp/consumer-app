@@ -1,0 +1,533 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		524616581DB5BF0D0072D4B1 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524616571DB5BF0D0072D4B1 /* SettingsViewController.swift */; };
+		5246165A1DB5ED4A0072D4B1 /* StubbedMachines.json in Resources */ = {isa = PBXBuildFile; fileRef = 524616591DB5ED4A0072D4B1 /* StubbedMachines.json */; };
+		524616A41DB9EE2D0072D4B1 /* VendingSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 524616A31DB9EE2D0072D4B1 /* VendingSDK.framework */; };
+		524616A51DB9EE2D0072D4B1 /* VendingSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 524616A31DB9EE2D0072D4B1 /* VendingSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		524D2C6D1D9026D500880018 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524D2C6C1D9026D500880018 /* AppDelegate.swift */; };
+		524D2C6F1D9026D500880018 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524D2C6E1D9026D500880018 /* ViewController.swift */; };
+		524D2C721D9026D500880018 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 524D2C701D9026D500880018 /* Main.storyboard */; };
+		524D2C771D9026D500880018 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 524D2C751D9026D500880018 /* LaunchScreen.storyboard */; };
+		524D2CDC1D911F8100880018 /* Machine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524D2CDB1D911F8100880018 /* Machine.swift */; };
+		524D2CE01D915CF000880018 /* MachineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524D2CDF1D915CF000880018 /* MachineViewController.swift */; };
+		525079431D94D93600A483A0 /* Response+Mapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525079421D94D93600A483A0 /* Response+Mapper.swift */; };
+		525079451D94DAF700A483A0 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525079441D94DAF700A483A0 /* Profile.swift */; };
+		525079471D94DFA500A483A0 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525079461D94DFA500A483A0 /* Card.swift */; };
+		525079491D94E24100A483A0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525079481D94E24100A483A0 /* LoginViewController.swift */; };
+		5250794C1D950BEA00A483A0 /* UnattendedRetailApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5250794B1D950BEA00A483A0 /* UnattendedRetailApi.swift */; };
+		525079501D98C10F00A483A0 /* UIColor+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5250794F1D98C10F00A483A0 /* UIColor+App.swift */; };
+		525079531D9A1AE800A483A0 /* MachineInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525079521D9A1AE800A483A0 /* MachineInfoViewController.swift */; };
+		525079551D9A1AF400A483A0 /* VendingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525079541D9A1AF400A483A0 /* VendingViewController.swift */; };
+		529C9C9B1D9A3E0500B01CB7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 529C9C9A1D9A3E0500B01CB7 /* Assets.xcassets */; };
+		529C9C9D1D9A439300B01CB7 /* ReceiptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529C9C9C1D9A439300B01CB7 /* ReceiptViewController.swift */; };
+		529C9CA11D9B794C00B01CB7 /* Approval.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529C9CA01D9B794B00B01CB7 /* Approval.swift */; };
+		5BF5C52204E94B5BC64AE07A /* Pods_VendingDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC75F6FDAF134BFD96FC86E3 /* Pods_VendingDemo.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		5246169C1DB7360B0072D4B1 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				524616A51DB9EE2D0072D4B1 /* VendingSDK.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		0EDF52ED56A5C45FE8E9AD76 /* Pods-VendingDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VendingDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-VendingDemo/Pods-VendingDemo.release.xcconfig"; sourceTree = "<group>"; };
+		524616571DB5BF0D0072D4B1 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		524616591DB5ED4A0072D4B1 /* StubbedMachines.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = StubbedMachines.json; path = Resources/StubbedMachines.json; sourceTree = "<group>"; };
+		524616A31DB9EE2D0072D4B1 /* VendingSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = VendingSDK.framework; sourceTree = "<group>"; };
+		524D2C691D9026D500880018 /* VendingDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VendingDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		524D2C6C1D9026D500880018 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		524D2C6E1D9026D500880018 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		524D2C711D9026D500880018 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		524D2C761D9026D500880018 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		524D2C781D9026D500880018 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		524D2CDB1D911F8100880018 /* Machine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Machine.swift; path = Model/Machine.swift; sourceTree = "<group>"; };
+		524D2CDF1D915CF000880018 /* MachineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MachineViewController.swift; sourceTree = "<group>"; };
+		525079421D94D93600A483A0 /* Response+Mapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Response+Mapper.swift"; path = "Extensions/Response+Mapper.swift"; sourceTree = "<group>"; };
+		525079441D94DAF700A483A0 /* Profile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Profile.swift; path = Model/Profile.swift; sourceTree = "<group>"; };
+		525079461D94DFA500A483A0 /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Card.swift; path = Model/Card.swift; sourceTree = "<group>"; };
+		525079481D94E24100A483A0 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		5250794B1D950BEA00A483A0 /* UnattendedRetailApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UnattendedRetailApi.swift; path = Service/UnattendedRetailApi.swift; sourceTree = "<group>"; };
+		5250794F1D98C10F00A483A0 /* UIColor+App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIColor+App.swift"; path = "Extensions/UIColor+App.swift"; sourceTree = "<group>"; };
+		525079521D9A1AE800A483A0 /* MachineInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MachineInfoViewController.swift; path = Vending/MachineInfoViewController.swift; sourceTree = "<group>"; };
+		525079541D9A1AF400A483A0 /* VendingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VendingViewController.swift; sourceTree = "<group>"; };
+		529C9C9A1D9A3E0500B01CB7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		529C9C9C1D9A439300B01CB7 /* ReceiptViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReceiptViewController.swift; path = Vending/ReceiptViewController.swift; sourceTree = "<group>"; };
+		529C9CA01D9B794B00B01CB7 /* Approval.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Approval.swift; path = Model/Approval.swift; sourceTree = "<group>"; };
+		75AA63E37AB53A737AF804C6 /* Pods-VendingDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VendingDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VendingDemo/Pods-VendingDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		CC75F6FDAF134BFD96FC86E3 /* Pods_VendingDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VendingDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		524D2C661D9026D500880018 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5BF5C52204E94B5BC64AE07A /* Pods_VendingDemo.framework in Frameworks */,
+				524616A41DB9EE2D0072D4B1 /* VendingSDK.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5246165B1DB5ED510072D4B1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				524616591DB5ED4A0072D4B1 /* StubbedMachines.json */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		524D2C601D9026D500880018 = {
+			isa = PBXGroup;
+			children = (
+				524D2C6B1D9026D500880018 /* VendingDemo */,
+				524D2C6A1D9026D500880018 /* Products */,
+				75DE1F43D4E14FB56FEAA6A0 /* Pods */,
+				AC9C2B2F1594715398365616 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		524D2C6A1D9026D500880018 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				524D2C691D9026D500880018 /* VendingDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		524D2C6B1D9026D500880018 /* VendingDemo */ = {
+			isa = PBXGroup;
+			children = (
+				525079511D9A1A8000A483A0 /* Vending */,
+				5250794A1D950B9F00A483A0 /* Service */,
+				524D2CDA1D911F7000880018 /* Model */,
+				525079411D94D92200A483A0 /* Extensions */,
+				5246165B1DB5ED510072D4B1 /* Resources */,
+				524D2C6C1D9026D500880018 /* AppDelegate.swift */,
+				525079481D94E24100A483A0 /* LoginViewController.swift */,
+				524D2C6E1D9026D500880018 /* ViewController.swift */,
+				524D2CDF1D915CF000880018 /* MachineViewController.swift */,
+				524616571DB5BF0D0072D4B1 /* SettingsViewController.swift */,
+				524D2C701D9026D500880018 /* Main.storyboard */,
+				529C9C9A1D9A3E0500B01CB7 /* Assets.xcassets */,
+				524D2C751D9026D500880018 /* LaunchScreen.storyboard */,
+				524D2C781D9026D500880018 /* Info.plist */,
+			);
+			path = VendingDemo;
+			sourceTree = "<group>";
+		};
+		524D2CDA1D911F7000880018 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				524D2CDB1D911F8100880018 /* Machine.swift */,
+				525079441D94DAF700A483A0 /* Profile.swift */,
+				525079461D94DFA500A483A0 /* Card.swift */,
+				529C9CA01D9B794B00B01CB7 /* Approval.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		525079411D94D92200A483A0 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				525079421D94D93600A483A0 /* Response+Mapper.swift */,
+				5250794F1D98C10F00A483A0 /* UIColor+App.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		5250794A1D950B9F00A483A0 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				5250794B1D950BEA00A483A0 /* UnattendedRetailApi.swift */,
+			);
+			name = Service;
+			sourceTree = "<group>";
+		};
+		525079511D9A1A8000A483A0 /* Vending */ = {
+			isa = PBXGroup;
+			children = (
+				525079521D9A1AE800A483A0 /* MachineInfoViewController.swift */,
+				525079541D9A1AF400A483A0 /* VendingViewController.swift */,
+				529C9C9C1D9A439300B01CB7 /* ReceiptViewController.swift */,
+			);
+			name = Vending;
+			sourceTree = "<group>";
+		};
+		75DE1F43D4E14FB56FEAA6A0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				75AA63E37AB53A737AF804C6 /* Pods-VendingDemo.debug.xcconfig */,
+				0EDF52ED56A5C45FE8E9AD76 /* Pods-VendingDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		AC9C2B2F1594715398365616 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				524616A31DB9EE2D0072D4B1 /* VendingSDK.framework */,
+				CC75F6FDAF134BFD96FC86E3 /* Pods_VendingDemo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		524D2C681D9026D500880018 /* VendingDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 524D2C7B1D9026D500880018 /* Build configuration list for PBXNativeTarget "VendingDemo" */;
+			buildPhases = (
+				D8F9D8468E2B9513788D3BF7 /* [CP] Check Pods Manifest.lock */,
+				524D2C651D9026D500880018 /* Sources */,
+				524D2C661D9026D500880018 /* Frameworks */,
+				524D2C671D9026D500880018 /* Resources */,
+				2235914B698A239501D7F74D /* [CP] Embed Pods Frameworks */,
+				93B5923F3BAB3EB42AF0E69C /* [CP] Copy Pods Resources */,
+				5246169C1DB7360B0072D4B1 /* Embed Frameworks */,
+				524616981DB728580072D4B1 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VendingDemo;
+			productName = VendingDemo;
+			productReference = 524D2C691D9026D500880018 /* VendingDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		524D2C611D9026D500880018 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = "Muhammad Azeem";
+				TargetAttributes = {
+					524D2C681D9026D500880018 = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Manual;
+					};
+				};
+			};
+			buildConfigurationList = 524D2C641D9026D500880018 /* Build configuration list for PBXProject "VendingDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 524D2C601D9026D500880018;
+			productRefGroup = 524D2C6A1D9026D500880018 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				524D2C681D9026D500880018 /* VendingDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		524D2C671D9026D500880018 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5246165A1DB5ED4A0072D4B1 /* StubbedMachines.json in Resources */,
+				524D2C771D9026D500880018 /* LaunchScreen.storyboard in Resources */,
+				529C9C9B1D9A3E0500B01CB7 /* Assets.xcassets in Resources */,
+				524D2C721D9026D500880018 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2235914B698A239501D7F74D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VendingDemo/Pods-VendingDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		524616981DB728580072D4B1 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "bash \"${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/VendingSDK.framework/strip-frameworks.sh\"";
+		};
+		93B5923F3BAB3EB42AF0E69C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VendingDemo/Pods-VendingDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D8F9D8468E2B9513788D3BF7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		524D2C651D9026D500880018 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				525079491D94E24100A483A0 /* LoginViewController.swift in Sources */,
+				525079501D98C10F00A483A0 /* UIColor+App.swift in Sources */,
+				5250794C1D950BEA00A483A0 /* UnattendedRetailApi.swift in Sources */,
+				524D2C6F1D9026D500880018 /* ViewController.swift in Sources */,
+				524D2CE01D915CF000880018 /* MachineViewController.swift in Sources */,
+				525079551D9A1AF400A483A0 /* VendingViewController.swift in Sources */,
+				525079431D94D93600A483A0 /* Response+Mapper.swift in Sources */,
+				524616581DB5BF0D0072D4B1 /* SettingsViewController.swift in Sources */,
+				525079451D94DAF700A483A0 /* Profile.swift in Sources */,
+				524D2CDC1D911F8100880018 /* Machine.swift in Sources */,
+				524D2C6D1D9026D500880018 /* AppDelegate.swift in Sources */,
+				525079471D94DFA500A483A0 /* Card.swift in Sources */,
+				529C9C9D1D9A439300B01CB7 /* ReceiptViewController.swift in Sources */,
+				525079531D9A1AE800A483A0 /* MachineInfoViewController.swift in Sources */,
+				529C9CA11D9B794C00B01CB7 /* Approval.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		524D2C701D9026D500880018 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				524D2C711D9026D500880018 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		524D2C751D9026D500880018 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				524D2C761D9026D500880018 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		524D2C791D9026D500880018 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		524D2C7A1D9026D500880018 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		524D2C7C1D9026D500880018 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 75AA63E37AB53A737AF804C6 /* Pods-VendingDemo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = VendingDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mastercard.ios.VendingDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		524D2C7D1D9026D500880018 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0EDF52ED56A5C45FE8E9AD76 /* Pods-VendingDemo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = VendingDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mastercard.ios.VendingDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		524D2C641D9026D500880018 /* Build configuration list for PBXProject "VendingDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				524D2C791D9026D500880018 /* Debug */,
+				524D2C7A1D9026D500880018 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		524D2C7B1D9026D500880018 /* Build configuration list for PBXNativeTarget "VendingDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				524D2C7C1D9026D500880018 /* Debug */,
+				524D2C7D1D9026D500880018 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 524D2C611D9026D500880018 /* Project object */;
+}

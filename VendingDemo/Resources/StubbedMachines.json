@@ -1,0 +1,24 @@
+ [
+      {
+          "address": "3355 S Las Vegas Blvd The Venetian",
+          "distance": 54.88,
+          "serial": "1017",
+          "latitude": "36.121174",
+          "name": "Mastercard Vending 1",
+          "description": "Soft drinks and snacks available for sale",
+          "model": "1",
+          "serviceId": "fff0",
+          "longitude": "-115.16961"
+      },
+      {
+          "address": "3355 S Las Vegas Blvd The Venetian",
+          "distance": 54.88,
+          "serial": "1018",
+          "latitude": "36.121174",
+          "name": "Mastercard Vending 2",
+          "description": "Soft drinks and snacks available for sale",
+          "model": "1",
+          "serviceId": "fff0",
+          "longitude": "-115.16961"
+      }
+  ]

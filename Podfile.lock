@@ -1,0 +1,33 @@
+PODS:
+  - Alamofire (4.0.0)
+  - Moya (8.0.0-beta.1):
+    - Moya/Core (= 8.0.0-beta.1)
+  - Moya/Core (8.0.0-beta.1):
+    - Alamofire (~> 4.0.0)
+    - Result
+  - ObjectMapper (2.0.0)
+  - Result (3.0.0)
+
+DEPENDENCIES:
+  - Moya (from `https://github.com/Moya/Moya.git`, tag `8.0.0-beta.1`)
+  - ObjectMapper (~> 2.0)
+
+EXTERNAL SOURCES:
+  Moya:
+    :git: https://github.com/Moya/Moya.git
+    :tag: 8.0.0-beta.1
+
+CHECKOUT OPTIONS:
+  Moya:
+    :git: https://github.com/Moya/Moya.git
+    :tag: 8.0.0-beta.1
+
+SPEC CHECKSUMS:
+  Alamofire: fef59f00388f267e52d9b432aa5d93dc97190f14
+  Moya: 63c4a59d2643c824df8c5a3b3a5f38dc2b48b055
+  ObjectMapper: aed2570edabbd3c9b26c939e1cabdb6558f933e0
+  Result: 1b3e431f37cbcd3ad89c6aa9ab0ae55515fae3b6
+
+PODFILE CHECKSUM: f2803e7fcb1cd5f4f9adde6f7dc3c84b4664ff84
+
+COCOAPODS: 1.0.1

@@ -1,0 +1,27 @@
+{
+  "name": "UnattendedRetailService",
+  "version": "0.0.1",
+  "summary": "Framework to interact with unattended retail service",
+  "homepage": "<Update URL>",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Muhammad Azeem": "muhammad.azeem@mastercard.com"
+  },
+  "platforms": {
+    "ios": "9.0"
+  },
+  "requires_arc": true,
+  "source": {
+    "git": "<Update URL>",
+    "tag": "v0.0.1"
+  },
+  "source_files": "Source/**/*.swift",
+  "dependencies": {
+    "Alamofire": [
+      "~> 4.0"
+    ]
+  }
+}
