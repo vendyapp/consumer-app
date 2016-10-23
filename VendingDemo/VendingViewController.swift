@@ -57,7 +57,7 @@ class VendingViewController : UIViewController {
         super.viewDidLoad()
         
         self.pageControl.numberOfPages = 4
-        connect()
+        //connect()
         
         let layer = CAShapeLayer()
         layer.strokeColor = UIColor.squash.cgColor
@@ -85,7 +85,7 @@ class VendingViewController : UIViewController {
             vendController = VendController(config: resultType)
         } else {
             print("Using bluetooth dongle")
-            vendController = VendController(deviceModel: machine.model, deviceSerial: machine.serial, serviceId: machine.serviceId, maxAmount: Amount(amount: 1.0))
+            vendController = VendController(deviceModel: machine.model, deviceSerial: machine.serial, serviceId: machine.serviceId, maxAmount: Amount(amount: 10.0))
         }
         
         vendController.delegate = self

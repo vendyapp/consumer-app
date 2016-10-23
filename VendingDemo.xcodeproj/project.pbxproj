@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		004903F21DBC23B5004EE28F /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 004903F11DBC23B5004EE28F /* MapKit.framework */; };
+		004903F41DBC271A004EE28F /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004903F31DBC271A004EE28F /* MapViewController.swift */; };
 		524616581DB5BF0D0072D4B1 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524616571DB5BF0D0072D4B1 /* SettingsViewController.swift */; };
 		5246165A1DB5ED4A0072D4B1 /* StubbedMachines.json in Resources */ = {isa = PBXBuildFile; fileRef = 524616591DB5ED4A0072D4B1 /* StubbedMachines.json */; };
 		524616A41DB9EE2D0072D4B1 /* VendingSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 524616A31DB9EE2D0072D4B1 /* VendingSDK.framework */; };
@@ -46,11 +48,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		004903F11DBC23B5004EE28F /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		004903F31DBC271A004EE28F /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		0EDF52ED56A5C45FE8E9AD76 /* Pods-VendingDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VendingDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-VendingDemo/Pods-VendingDemo.release.xcconfig"; sourceTree = "<group>"; };
 		524616571DB5BF0D0072D4B1 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		524616591DB5ED4A0072D4B1 /* StubbedMachines.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = StubbedMachines.json; path = Resources/StubbedMachines.json; sourceTree = "<group>"; };
 		524616A31DB9EE2D0072D4B1 /* VendingSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = VendingSDK.framework; sourceTree = "<group>"; };
-		524D2C691D9026D500880018 /* VendingDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VendingDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		524D2C691D9026D500880018 /* Vendy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vendy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		524D2C6C1D9026D500880018 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		524D2C6E1D9026D500880018 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		524D2C711D9026D500880018 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -78,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				004903F21DBC23B5004EE28F /* MapKit.framework in Frameworks */,
 				5BF5C52204E94B5BC64AE07A /* Pods_VendingDemo.framework in Frameworks */,
 				524616A41DB9EE2D0072D4B1 /* VendingSDK.framework in Frameworks */,
 			);
@@ -107,7 +112,7 @@
 		524D2C6A1D9026D500880018 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				524D2C691D9026D500880018 /* VendingDemo.app */,
+				524D2C691D9026D500880018 /* Vendy.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -123,6 +128,7 @@
 				524D2C6C1D9026D500880018 /* AppDelegate.swift */,
 				525079481D94E24100A483A0 /* LoginViewController.swift */,
 				524D2C6E1D9026D500880018 /* ViewController.swift */,
+				004903F31DBC271A004EE28F /* MapViewController.swift */,
 				524D2CDF1D915CF000880018 /* MachineViewController.swift */,
 				524616571DB5BF0D0072D4B1 /* SettingsViewController.swift */,
 				524D2C701D9026D500880018 /* Main.storyboard */,
@@ -183,6 +189,7 @@
 		AC9C2B2F1594715398365616 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				004903F11DBC23B5004EE28F /* MapKit.framework */,
 				524616A31DB9EE2D0072D4B1 /* VendingSDK.framework */,
 				CC75F6FDAF134BFD96FC86E3 /* Pods_VendingDemo.framework */,
 			);
@@ -211,7 +218,7 @@
 			);
 			name = VendingDemo;
 			productName = VendingDemo;
-			productReference = 524D2C691D9026D500880018 /* VendingDemo.app */;
+			productReference = 524D2C691D9026D500880018 /* Vendy.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -226,7 +233,8 @@
 				TargetAttributes = {
 					524D2C681D9026D500880018 = {
 						CreatedOnToolsVersion = 8.0;
-						ProvisioningStyle = Manual;
+						DevelopmentTeam = Y57CQ7CSKS;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -343,6 +351,7 @@
 				529C9C9D1D9A439300B01CB7 /* ReceiptViewController.swift in Sources */,
 				525079531D9A1AE800A483A0 /* MachineInfoViewController.swift in Sources */,
 				529C9CA11D9B794C00B01CB7 /* Approval.swift in Sources */,
+				004903F41DBC271A004EE28F /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -467,8 +476,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				DEVELOPMENT_TEAM = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = Y57CQ7CSKS;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -477,7 +486,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mastercard.ios.VendingDemo;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Vendy;
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
@@ -490,8 +499,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				DEVELOPMENT_TEAM = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = Y57CQ7CSKS;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -500,7 +509,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mastercard.ios.VendingDemo;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Vendy;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};

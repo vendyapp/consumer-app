@@ -27,6 +27,7 @@
 import UIKit
 import Moya
 import CoreLocation
+import VendingSDK
 
 let CellIdentifier = "Cell"
 
@@ -43,15 +44,18 @@ class ViewController: UIViewController {
     var nearbyMachines = [Machine]()
     
     var nearbyMachineRequest: Cancellable?
+    var vendController: VendController!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.title = NSLocalizedString("AnyDrink", comment: "")
+        let logo = UIImage(named:"vendy_logo_2.png")
+        let imageView = UIImageView(image:logo)
+        self.navigationItem.titleView = imageView
         
         self.locationManager = CLLocationManager()
         locationManager.delegate = self
         
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "settings"), style: .plain, target: self, action: #selector(showSettings))
+        //self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "settings"), style: .plain, target: self, action: #selector(showSettings))
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .refresh, target: self, action: #selector(refresh))
         self.refresh()
     }
@@ -69,7 +73,6 @@ class ViewController: UIViewController {
         if "machineDetail" == segue.identifier,
             let vc = segue.destination as? MachineViewController,
             let indexPath = self.tableView.indexPathForSelectedRow {
-            
             vc.machine = self.nearbyMachines[indexPath.row]
         }
     }
@@ -166,6 +169,7 @@ class ViewController: UIViewController {
             self.loadingView.alpha = 0.0
         }
     }
+
 }
 
 // MARK: - Table view methods
@@ -189,8 +193,10 @@ extension ViewController : UITableViewDataSource {
 extension ViewController : UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        showLoadingView()
     }
 }
+
 
 // MARK: - Core location methods
 extension ViewController : CLLocationManagerDelegate {

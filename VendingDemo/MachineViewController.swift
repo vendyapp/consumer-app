@@ -26,29 +26,51 @@
  */
 import UIKit
 import VendingSDK
+import Alamofire
 
 class MachineViewController: UIViewController {
     @IBOutlet weak var machineNameLabel: UILabel!
     @IBOutlet weak var containerView: UIView!
+    @IBOutlet weak var lblMessage: UILabel!
+    @IBOutlet weak var lblReceipt: UILabel!
+    @IBOutlet weak var lblWarning: UILabel!
 
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    
     var machine: Machine?
     var currentVC: UIViewController?
+    var vendController: VendController!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
-        guard self.machine != nil else {
-            let vc = UIAlertController(title: "Error", message: "Machine information not available", preferredStyle: .alert)
-            vc.addAction(UIAlertAction(title: "Dismiss", style: .cancel, handler: { _ in
-                self.dismiss(animated: true, completion: nil)
-            }))
-            
-            present(vc, animated: true, completion: nil)
-            return
-        }
+        let logo = UIImage(named:"vendy_logo_2.png")
+        let imageView = UIImageView(image:logo)
+        self.navigationItem.titleView = imageView
         
-        configureView()
+        vendController = VendController(deviceModel: "1", deviceSerial:"1018",serviceId: "fff0", maxAmount: Amount(amount: 10.0))
+        vendController = VendController(config:.allSuccess)
+
+        vendController.delegate = self
+        
+        do {
+            try vendController.connect()
+        } catch {
+            print(error)
+        }
+
+        // Do any additional setup after loading the view.
+//        guard self.machine != nil else {
+//            let vc = UIAlertController(title: "Error", message: "Machine information not available", preferredStyle: .alert)
+//            vc.addAction(UIAlertAction(title: "Dismiss", style: .cancel, handler: { _ in
+//                self.dismiss(animated: true, completion: nil)
+//            }))
+//            
+//            present(vc, animated: true, completion: nil)
+//            return
+//        }
+        
+        //configureView()
     }
 
     override func didReceiveMemoryWarning() {
@@ -66,7 +88,8 @@ class MachineViewController: UIViewController {
     
     // MARK: - Private Methods
     func configureView() {
-        machineNameLabel.text = machine?.name
+        
+        //machineNameLabel.text = machine?.name
         
         containerView.subviews.forEach({ $0.removeFromSuperview() })
         
@@ -128,6 +151,14 @@ class MachineViewController: UIViewController {
         self.cycleFromViewController(oldViewController: self.currentVC!, toViewController: newViewController)
         self.currentVC = newViewController
     }
+    
+    func makeVendyRequest() {
+        Alamofire.request("http://104.155.107.44:5555/transfer")
+            .responseJSON { (response:DataResponse<Any>) in
+                print(response)
+                self.vendController.approveAuth("dummyPayload")
+        }
+    }
 }
 
 // MARK: - VendingFlow methods
@@ -145,5 +176,62 @@ extension MachineViewController : VendingFlow {
         
         let nav = UINavigationController(rootViewController: vc)
         self.navigationController?.present(nav, animated: true, completion: nil)
+    }
+}
+
+extension MachineViewController : VendControllerDelegate {
+    func connected() {
+        print("Connected")
+        self.activityIndicator.stopAnimating()
+        self.lblMessage.text = "Select Item on Machine"
+    }
+    
+    func disconnected(_ error: VendError) {
+        self.activityIndicator.startAnimating()
+        self.lblMessage.text = "Pairing Device..."
+    }
+
+    func authRequest(_ amount: NSNumber, token: String?) {
+        print("Auth requested")
+        self.activityIndicator.startAnimating()
+        self.lblMessage.text = NSLocalizedString("Authorizing Payment...", comment: "")
+        
+        makeVendyRequest()
+        //DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2)) { [weak self] in
+        //    self?.vendController.approveAuth("dummyPayload")
+            
+        //}
+    }
+    
+    func processStarted() {
+        print("Process started")
+    }
+    
+    func processCompleted(_ finalAmount: NSNumber, processStatus: ProcessStatus, completedPayload: String) {
+        print("Process completed")
+        self.activityIndicator.stopAnimating()
+        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(0)) { [weak self] in
+            if processStatus == .success {
+                // Show receipt
+                //let amount = String(format: "$%0.2f", finalAmount.floatValue)
+                let amount = "$12.80"
+                self?.lblReceipt.text = amount
+                self?.lblMessage.text = "Collect Item from Machine"
+                self?.lblWarning.text = "Payment Confirmed!"
+
+                //self?.delegate?.flowComplete()
+            } else {
+                //self?.showError(error: "Vending failed")
+            }
+        }
+    }
+    
+    func invalidProduct() {
+        print("Invalid product requested")
+    }
+    
+    func timeoutWarning() {
+        print("Timeout warning")
+        self.vendController.keepAlive()
     }
 }

@@ -46,6 +46,7 @@ class MachineInfoViewController : UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        pairButtonPressed(self)
     }
     
     // MARK: - Action methods
@@ -81,10 +82,16 @@ class MachineInfoViewController : UIViewController {
             return
         }
         
-        self.vendingTypeLabel.text = machine.name
-        self.machineDescriptionLabel.text = "Fruit juices, soft drinks and  tea drinks are available for sale"
-        self.machineAddressLabel.text = machine.address
-        self.machineDistanceLabel.text = machine.formatDistance()
+        //self.vendingTypeLabel.text = machine.name
+        //self.machineDescriptionLabel.text = "Michail's School Supplies"
+        //self.machineAddressLabel.text = machine.address
+        //self.machineDistanceLabel.text = machine.formatDistance()
+        
+        self.vendingTypeLabel.text = "Michail's School Supplies"
+        self.machineDescriptionLabel.text = "Calculators, Books, and More"
+        self.machineAddressLabel.text = ""
+        self.machineDistanceLabel.text = ""
+
         
         self.showOnMapButton.isEnabled = true
         self.pairButton.isEnabled = true
